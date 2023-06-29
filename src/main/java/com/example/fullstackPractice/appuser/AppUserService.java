@@ -22,7 +22,7 @@ public class AppUserService implements UserDetailsService {
             throws UsernameNotFoundException {
         return appUserRepository().findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException(
-                        String.format(USER_NOT_FOUND_MSG, email)));
+                        String.format(USER_NOT_FOUND_MSG , email)));
 
     }
 }
